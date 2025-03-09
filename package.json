@@ -1,10 +1,10 @@
 {
-  "name": "llm-project-prompt",
+  "name": "project-prompter",
   "version": "1.0.0",
   "description": "Generate an LLM prompt for your project's code",
   "main": "index.js",
   "bin": {
-    "llm-project-prompt": "./index.js"
+    "project-prompter": "./index.js"
   },
   "dependencies": {
     "minimist": "^1.2.8",
