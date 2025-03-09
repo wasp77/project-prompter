@@ -15,11 +15,6 @@ A command-line tool that generates a prompt for an LLM from your code project. I
 ### Local Usage
 
 ```bash
-# Clone or create a directory for the tool
-mkdir llm-project-prompt
-cd llm-project-prompt
-
-# Save index.js and package.json files there
 # Then install dependencies
 npm install
 
@@ -36,42 +31,42 @@ chmod +x index.js
 # After setting up locally as above:
 npm install -g .
 # Now you can run from anywhere
-llm-project-prompt
+project-prompter
 ```
 
 ### Using in Your Projects
 
 ```bash
 # Add as a local dev dependency (from your project root)
-npm install --save-dev ../path/to/llm-project-prompt
+npm install --save-dev ../path/to/project-prompter
 
 # Then use via npx or package.json scripts
-npx llm-project-prompt
+npx project-prompter
 ```
 
 ## Usage
 
 ```bash
 # Basic usage (uses current directory, respects .gitignore)
-llm-project-prompt
+project-prompter
 
 # Output to a file
-llm-project-prompt --output prompt.txt
+project-prompter --output prompt.txt
 
 # Include only specific files or directories
-llm-project-prompt --include "src/**/*.js"
+project-prompter --include "src/**/*.js"
 
 # Multiple include patterns
-llm-project-prompt --include "src/**/*.js" --include "lib/**/*.js"
+project-prompter --include "src/**/*.js" --include "lib/**/*.js"
 
 # Exclude specific files or patterns
-llm-project-prompt --exclude "**/*.test.js" --exclude "node_modules/**"
+project-prompter --exclude "**/*.test.js" --exclude "node_modules/**"
 
 # Ignore .gitignore rules
-llm-project-prompt --no-gitignore
+project-prompter --no-gitignore
 
 # Limit output size
-llm-project-prompt --max-size "2mb"
+project-prompter --max-size "2mb"
 ```
 
 ## Options
