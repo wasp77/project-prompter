@@ -49,6 +49,8 @@ const BINARY_EXTENSIONS = new Set([
   ".mdb",
 ]);
 
+const IGNORE_EXTENSIONS = new Set(['.md'])
+
 const argv = minimist(process.argv.slice(2), {
   boolean: ["help", "no-gitignore"],
   string: ["include", "exclude", "output", "max-size"],
@@ -151,6 +153,10 @@ async function main() {
     let filteredFiles = allFiles.filter((file) => {
       const ext = path.extname(file).toLowerCase();
       if (BINARY_EXTENSIONS.has(ext)) {
+        return false;
+      }
+
+      if (IGNORE_EXTENSIONS.has(ext)) {
         return false;
       }
 
