@@ -1,0 +1,20 @@
+{
+  "name": "llm-project-prompt",
+  "version": "1.0.0",
+  "description": "Generate an LLM prompt for your project's code",
+  "main": "index.js",
+  "bin": {
+    "llm-project-prompt": "./index.js"
+  },
+  "dependencies": {
+    "minimist": "^1.2.8",
+    "ignore": "^5.2.4",
+    "glob": "^10.3.10",
+    "minimatch": "^9.0.3"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "author": "",
+  "license": "MIT"
+}
